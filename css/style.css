@@ -16,6 +16,13 @@
     margin-right: auto;
 }
 
+.container.sign-up {
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 ul,
 summary{
     list-style: none;
@@ -51,6 +58,7 @@ p {
 
 .page-body{
     margin-top: 55px;
+    margin-bottom: 300px;
     margin-left: auto;
     margin-right: auto;
 
@@ -64,9 +72,73 @@ p {
     color: var(--main-text-color);
 }
 
+/* Buttons */
+
+button {
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 5px;
+    
+    text-align: center;
+    text-transform: uppercase;
+}
+
+button.transparent,
+button.sketch:focus,
+button.sketch:hover {
+    box-sizing: border-box;
+    background: transparent;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+}
+
+button.sketch,
+button.transparent:focus,
+button.transparent:hover {
+    background: var(--accent-color);
+    color: var(--main-section-color);
+    border: 1px solid transparent;
+}
+
+button.nav {
+    margin-left: auto;
+    padding: 13px 20px;
+    
+}
+
+button.hero{
+    min-width: 200px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 21px;
+    padding-bottom: 21px;
+}
+
+button.cta{
+    min-width: 200px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+button.sketch.cta,
+button.transparent.cta:focus,
+button.transparent.cta:hover {
+    background-color: var(--logo-color);
+    color: var(--main-section-color);
+}
+
+button.transparent.cta,
+button.sketch.cta:hover,
+button.sketch.cta:focus {
+    background-color: transparent;
+    color: var(--logo-color);
+    border: 1px solid var(--logo-color);;
+}
+
+
 /* Header */
 
-.header{
+.header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -114,30 +186,6 @@ p {
     margin-right: 31px;
 }
 
-button.nav{
-    margin-left: auto;
-}
-
-/* Button */
-
-button {
-    margin: 0;
-    padding: 13px 20px;
-    cursor: pointer;
-
-    color: var(--accent-color);
-    border: 1px solid var(--accent-color);
-    box-sizing: border-box;
-    border-radius: 5px;
-    background: transparent;
-}
-
-button:hover,
-button:focus{
-    background-color: var(--accent-color);
-    color: var(--header-footer-color);
-}
-
 /* Main */
 
 /* Section Hero */
@@ -166,25 +214,6 @@ h1{
     margin-bottom: 52px;
 }
 
-button.find {
-    display: inline-block;
-    text-align: center;
-    text-transform: uppercase;
-    cursor: pointer;
-    padding: 23px 25px;
-    min-width: 200px;
-
-    color: var(--main-section-color);
-    background: var(--accent-color);
-    border-radius: 5px;
-}
-
-button.find:hover,
-button.find:focus{
-    background: transparent;
-    color: var(--accent-color);
-}
-
 /* Section about work */
 
 .section-work .description{
@@ -204,25 +233,6 @@ h2{
     text-align: justify;
     font-size: 20px;
     line-height: 1.40;
-}
-
-button.work{
-    display: inline-block;
-    text-align: center;
-    text-transform: uppercase;
-    cursor: pointer;
-    min-width: 200px;
-    padding: 23px 25px;
-    
-    background: transparent;
-    color: var(--accent-color);
-    border-radius: 5px;
-}
-
-button.work:hover,
-button.work:focus{
-    color: var(--main-section-color);
-    background: var(--accent-color);
 }
 
 /* Section Gift */
@@ -288,5 +298,199 @@ button.work:focus{
 /* CTA Section */
 
 .cta-section{
+    padding-top: 80px;
+    padding-bottom: 70px;
+
     background-color: var(--accent-color);
+}
+
+.cta-section .bold{
+    font-weight: 700;
+}
+
+.cta-section p{
+    font-size: 32px;
+    line-height: 1.40;
+}
+
+.cta-list{
+    display: flex;
+}
+ .cta-list .item{
+    display: block;
+ }
+
+ .cta-list .item:not(:last-child){
+     margin-right: 15px;
+ }
+
+ /* Section Posts Blog Top */
+
+ .blog{
+    padding-top: 88px;
+    padding-bottom: 80px;
+ }
+
+ .blog .title{
+     text-align: center;
+     margin-bottom: 70px;
+ }
+
+ .blog h3{
+    display: inline-block;
+    line-height: 1.18;
+    margin-bottom: 27px;
+}
+
+ .blog .text>p{
+    
+    line-height: 1.35;
+    margin-bottom: 60px;
+ }
+
+ /* Main article */
+
+ .main-article{
+     display: flex;
+     margin-bottom: 40px;
+
+     background-color: var(--logo-color);
+     color: var(--main-section-color);
+ }
+
+ .main-article .text{
+    padding-top: 63px;
+    padding-left: 78px;
+    padding-bottom: 50px;
+ }
+
+ .main-article h3{
+    font-size: 14px;
+    line-height: 1.40;
+ }
+
+.main-article>.text p{
+    font-size: 48px;
+}
+
+.main-article .link{
+    display: inline-block;
+    color: var(--main-section-color);
+    line-height: 1.40;
+}
+
+/* Article */
+
+.article{
+    display: flex;
+}
+
+.article .item{
+    display: block;
+    width: 570px;
+    padding: 48px;
+}
+
+.article .item:focus,
+.article .item:hover{
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+}
+
+.article .item:first-child{
+    margin-right: 30px;
+}
+
+.article h4{
+    margin-bottom: 16px;
+
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.40;
+}
+
+.article p{
+    margin-bottom: 16px;
+    height: 72px;
+}
+
+.article .link{
+    color: var(--main-text-color);
+    font-size: 14px;
+    line-height: 1.40;
+}
+
+/* Footer */
+
+footer{
+    background-color: var(--header-footer-color);
+    padding-top: 115px;
+}
+
+.container.footer {
+    width: 1000px;
+    padding-bottom: 35px;
+}
+
+.nav-footer{
+    display: flex;
+    justify-content: center;
+
+    padding-bottom: 43px;
+    border-bottom: 1px solid var(--main-text-color);
+    margin-bottom: 55px;
+}
+
+.nav{
+    display: flex;
+}
+
+.nav .item {
+    display: block;
+    align-self: center;
+}
+
+.nav .item:first-child{
+    margin-right: 81px;
+}
+
+.nav .link{
+    color: var(--main-text-color);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.40;
+}
+
+footer .logo{
+    margin-left: 181px;
+    margin-right: 181px;
+    font-family: 'Homemade Apple', cursive;
+    font-size: 18px;
+    line-height: 2.17;
+    color: var(--accent-color);
+}
+
+/* Social media */
+
+.social-media{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 72px;
+}
+
+.social-media .item{
+    display: block;
+}
+
+.social-media .item:not(:last-child){
+    margin-right: 24px;
+}
+
+.container.footer p{
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.40;
+}
+
+.container.footer span{
+    margin-right: 14px;
 }
