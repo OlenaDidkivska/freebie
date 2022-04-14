@@ -52,15 +52,8 @@ p {
 
 /* Body */
 
-.main-body{
-    background: var(--main-backgroun-color);
-}
-
 .page-body{
-    margin-top: 55px;
-    margin-bottom: 300px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 
     width: 1440px;
     background: var(--main-section-color);
@@ -83,18 +76,14 @@ button {
     text-transform: uppercase;
 }
 
-button.transparent,
-button.sketch:focus,
-button.sketch:hover {
+button.transparent {
     box-sizing: border-box;
     background: transparent;
     color: var(--accent-color);
     border: 1px solid var(--accent-color);
 }
 
-button.sketch,
-button.transparent:focus,
-button.transparent:hover {
+button.sketch {
     background: var(--accent-color);
     color: var(--main-section-color);
     border: 1px solid transparent;
@@ -120,16 +109,12 @@ button.cta{
     padding-bottom: 18px;
 }
 
-button.sketch.cta,
-button.transparent.cta:focus,
-button.transparent.cta:hover {
+button.sketch.cta {
     background-color: var(--logo-color);
     color: var(--main-section-color);
 }
 
-button.transparent.cta,
-button.sketch.cta:hover,
-button.sketch.cta:focus {
+button.transparent.cta {
     background-color: transparent;
     color: var(--logo-color);
     border: 1px solid var(--logo-color);;
@@ -255,8 +240,8 @@ h2{
     margin-bottom: 137px;
 }
 
-.gift-item:hover,
-.gift-item:focus{
+.gift-list .link:hover .gift-item,
+.gift-list .link:focus .gift-item{
     background-color: var(--main-section-color);
     filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.05));
 }
@@ -444,7 +429,7 @@ footer{
     display: flex;
 }
 
-.nav .item {
+.nav-list .item {
     display: block;
     align-self: center;
 }
@@ -479,6 +464,7 @@ footer .logo{
 
 .social-media .item{
     display: block;
+    cursor: pointer;
 }
 
 .social-media .item:not(:last-child){
